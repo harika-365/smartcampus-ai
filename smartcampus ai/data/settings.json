@@ -1,0 +1,6 @@
+{
+    "theme": "Blue/White",
+    "notifications": true,
+    "default_model": "gpt-4o-mini",
+    "sidebar_option": "Expanded"
+}

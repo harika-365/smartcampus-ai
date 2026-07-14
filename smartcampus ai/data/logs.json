@@ -1,0 +1,26 @@
+[
+    {
+        "timestamp": "2026-07-14 15:06:17",
+        "user_id": 1,
+        "action": "Login",
+        "details": "Successfully logged in"
+    },
+    {
+        "timestamp": "2026-07-14 15:06:17",
+        "user_id": 2,
+        "action": "Register",
+        "details": "Successfully registered user: tester@smartcampus.ai (student)"
+    },
+    {
+        "timestamp": "2026-07-14 15:06:17",
+        "user_id": 2,
+        "action": "Login",
+        "details": "Successfully logged in"
+    },
+    {
+        "timestamp": "2026-07-14 15:06:17",
+        "user_id": 2,
+        "action": "Delete Account",
+        "details": "User account was deleted"
+    }
+]

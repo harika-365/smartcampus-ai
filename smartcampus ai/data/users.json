@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "name": "Admin User",
+        "email": "admin@smartcampus.ai",
+        "password": "$2b$12$5W4vNYSJZ.pHMUKG2zYv7evMHhBXrgzOO.im6cmgSjJ7ixa5ITiNq",
+        "role": "admin"
+    }
+]

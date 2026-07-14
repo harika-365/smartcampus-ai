@@ -1,0 +1,178 @@
+/* Import Modern Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+/* Apply custom typography defaults */
+html, body, [class*="css"], .stApp {
+    font-family: 'Plus Jakarta Sans', 'Outfit', -apple-system, sans-serif;
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.06);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 20px;
+}
+
+.glass-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.12);
+    border-color: rgba(30, 144, 255, 0.5);
+}
+
+/* Dark Mode support (Streamlit automatically overrides theme based on context, we can align elements using media queries or custom theme variables) */
+@media (prefers-color-scheme: dark) {
+    .glass-card {
+        background: rgba(18, 24, 40, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    }
+    .glass-card:hover {
+        border-color: rgba(30, 144, 255, 0.4);
+        box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.45);
+    }
+}
+
+/* Dashboard Gradient Headers */
+.gradient-header {
+    background: linear-gradient(135deg, #1e3c72 0%, #1e90ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+}
+
+.gradient-subtitle {
+    font-size: 1.1rem;
+    color: #64748b;
+    margin-bottom: 24px;
+}
+
+/* Rounded Profile Cards */
+.profile-avatar {
+    border-radius: 50%;
+    border: 4px solid #1e90ff;
+    box-shadow: 0 4px 15px rgba(30, 144, 255, 0.2);
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Styled Alert Banners */
+.alert-banner {
+    border-radius: 12px;
+    padding: 14px 20px;
+    margin-bottom: 16px;
+    font-weight: 500;
+    border-left: 5px solid;
+}
+
+.alert-success {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: #047857;
+    border-left-color: #10b981;
+}
+
+.alert-info {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: #1d4ed8;
+    border-left-color: #3b82f6;
+}
+
+.alert-warning {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: #b45309;
+    border-left-color: #f59e0b;
+}
+
+.alert-danger {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #b91c1c;
+    border-left-color: #ef4444;
+}
+
+/* Navigation buttons & sidebar enhancements */
+[data-testid="stSidebar"] {
+    background-color: #f8fafc !important;
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+    [data-testid="stSidebar"] {
+        background-color: #0b0f19 !important;
+        border-right: 1px solid rgba(255, 255, 255, 0.05);
+    }
+}
+
+/* Streamlit Button Styling Overrides */
+div.stButton > button {
+    background: linear-gradient(135deg, #1e3c72 0%, #1e90ff 100%) !important;
+    color: white !important;
+    border: none !important;
+    padding: 10px 24px !important;
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+    font-family: 'Outfit', sans-serif !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(30, 144, 255, 0.15) !important;
+    width: 100%;
+}
+
+div.stButton > button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(30, 144, 255, 0.3) !important;
+}
+
+div.stButton > button:active {
+    transform: translateY(0px) !important;
+}
+
+/* Secondary Button styling */
+div.stButton > button.secondary-btn {
+    background: transparent !important;
+    color: #1e90ff !important;
+    border: 1px solid #1e90ff !important;
+    box-shadow: none !important;
+}
+
+div.stButton > button.secondary-btn:hover {
+    background: rgba(30, 144, 255, 0.05) !important;
+}
+
+/* Metric Widgets Styling */
+[data-testid="stMetricValue"] {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 2rem !important;
+    color: #1e3c72 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    [data-testid="stMetricValue"] {
+        color: #60a5fa !important;
+    }
+}
+
+[data-testid="stMetricLabel"] {
+    font-weight: 500;
+    color: #64748b !important;
+}
+
+/* Chat Input Styling */
+[data-testid="stChatInput"] {
+    border-radius: 12px !important;
+    border: 1px solid rgba(30, 144, 255, 0.2) !important;
+}
+
+/* Logo placement styling */
+.logo-container {
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 10px;
+}
